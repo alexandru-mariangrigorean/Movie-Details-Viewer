@@ -31,7 +31,6 @@ def search():
     except requests.exceptions.RequestException as e:
         result.configure(text=f"Eroare conexiune: {e}", text_color="red")
         
-# --- GUI ---
 ctk.CTkLabel(app, text="Nume film:", font=("Arial", 14)).grid(row=0, column=0, padx=10, pady=(15, 5), sticky="w")
 entry = ctk.CTkEntry(app, width=250, placeholder_text="Ex: The Matrix")
 entry.grid(row=1, column=0, padx=10, pady=5, sticky="w")
@@ -51,5 +50,6 @@ actors.grid(row=5, column=0, columnspan=2, padx=10, pady=3, sticky="w")
 
 plot = ctk.CTkLabel(app, text="Sinopsis: -", wraplength=450, justify="left")
 plot.grid(row=6, column=0, columnspan=2, padx=10, pady=3, sticky="w")
+
 
 app.mainloop()
